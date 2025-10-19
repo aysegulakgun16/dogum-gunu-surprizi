@@ -36,7 +36,12 @@
     }
     @keyframes float { from { transform: translateY(100vh) } to { transform: translateY(-10vh) } }
 
-    .wrap { min-height: 100%; display: grid; place-items: center; padding: 40px 18px; }
+    .wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0 18px; /* 40px yerine 0 yaptık */
+}
     .card {
       width: min(900px, 100%);
       background: rgba(255,255,255,0.06);
@@ -81,11 +86,12 @@
     }
 
     /* Pasta */
-    .cake {
-      margin-top: 40px;
-      display: grid; place-items: center;
-      position: relative;
-    }
+   .cake {
+  margin-top: 10px; /* 40px yerine 10px */
+  display: grid;
+  place-items: center;
+  position: relative;
+}
     .cake-base {
       width: 80%;
       height: 80px;
@@ -146,19 +152,21 @@
       to { opacity: 0; transform: translateY(-70px) translateX(var(--dx, 0)) scale(1.5); }
     }
 
-    #blowBtn {
-      background: linear-gradient(90deg, #ffd166, #ff9f1c);
-      color: #1b1e23;
-      font-weight: 800;
-      padding: 12px 18px;
-      border-radius: 14px;
-      box-shadow: 0 8px 22px rgba(255, 209, 102, .35);
-      width: 70%;
-      margin-top: 20px;
-      border: none;
-      cursor: pointer;
-      transition: transform .2s ease;
-    }
+ #blowBtn {
+  background: linear-gradient(90deg, #ffd166, #ff9f1c);
+  color: #1b1e23;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(255, 209, 102, .35);
+  width: 70%;
+  margin-top: 12px; /* biraz daha yukarı alalım */
+  border: none;
+  cursor: pointer;
+  transition: transform .2s ease;
+  display: block;
+}
+
     #blowBtn:active {
       transform: scale(.96);
     }
@@ -227,7 +235,7 @@
         <p>Sekiz yıl önce hayatıma dokundun; o günden beri her şey seninle anlam kazandı.</p>
         <p>Kahkahalarımız, sessizliğimiz, her anımız Beşiktaş’ın renkleri gibi: siyah-beyaz ama içinde binlerce anlam…</p>
         <p>Sen yanımdayken zaman duruyor gibi. Bu sayfa küçük bir sürpriz ama kalbim kadar büyük bir sevgiyle hazırlandı.</p>
-        <p>Dileğini tut, ve mumları üfle 😮‍💨</p>
+        <p>Dileğini tut, ve mumları üfle 💨 </p>
         <div class="sig">— Ayşegül ♡</div>
       </div>
 
@@ -235,7 +243,7 @@
         <div class="candles" id="candles"></div>
         <div class="cake-base"></div>
         <div class="smoke" id="smoke"></div>
-        <button id="blowBtn">Üfle 😮‍💨</button>
+        <button id="blowBtn">Üfle 💨 </button>
       </div>
     </div>
   </div>
